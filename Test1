@@ -1,0 +1,85 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Test1 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int testCases = in.nextInt();
+		for (int testCase = 0; testCase < testCases; testCase++) {
+			int n = in.nextInt();
+			List<Integer> arr = new ArrayList<Integer>();
+			List<Integer> z=sumoflength(arr,arr.size());
+		}
+
+	}
+
+	private static List<Integer> sumoflength(List<Integer> arr, int n) {
+		 //For maintaining distinct elements.
+		List<Integer> s=new ArrayList<>();
+		int[] len = {0};
+		// Initialize ending point and result
+		int j = 0;
+
+		// Fix starting point
+		for (int i = 0; i < n; i++) {
+			// Find ending point for current subarray with
+			// distinct elements.
+			 len[i]=0;
+			while (arr.get(i) > 0) {
+				int a=arr.get(i);
+			    s.add( a % 10);
+			    a = a/ 10;
+			    len[i]=len[i]+1;
+			}
+			System.out.println("s"+s+"len"+len);
+//			// Calculating and adding all possible length
+//			// subarrays in arr[i..j]
+//			ans += ((j - i) * (j - i + 1)) / 2;
+//
+//			// Remove arr[i] as we pick new stating point
+//			// from next
+//			s.erase(arr[i]);
+//		}
+//
+//		return ans;
+	}
+		return s;
+	}
+
+
+//	static List<Integer> sumoflength(List<Integer> arr, int n) {
+//		// For maintaining distinct elements.
+//		List<Integer> s=new ArrayList<>();
+//		int[] len = {0};
+//		// Initialize ending point and result
+//		int j = 0;
+//
+//		// Fix starting point
+//		for (int i = 0; i < n; i++) {
+//			// Find ending point for current subarray with
+//			// distinct elements.
+//			 len[i]=0;
+//			while (arr.get(i) > 0) {
+//				int a=arr.get(i);
+//			    s.add( a % 10);
+//			    a = a/ 10;
+//			    len[i]=len[i]+1;
+//			}
+//			System.out.println("s"+s+"len"+len);
+////			// Calculating and adding all possible length
+////			// subarrays in arr[i..j]
+////			ans += ((j - i) * (j - i + 1)) / 2;
+////
+////			// Remove arr[i] as we pick new stating point
+////			// from next
+////			s.erase(arr[i]);
+////		}
+////
+////		return ans;
+//	}
+//		return s;
+//}
+}
+
